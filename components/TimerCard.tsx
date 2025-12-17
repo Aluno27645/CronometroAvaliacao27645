@@ -19,16 +19,11 @@ export default function TimerCard({ timer }: TimerCardProps) {
 
   useEffect(() => {
     if (timer.status === 'running') {
-      let tickCount = 0;
       const interval = setInterval(() => {
-        tickCount++;
         const newTime = localTime - 1;
         setLocalTime(newTime);
-        
-        // Update database every 2 seconds for better sync
-        if (tickCount % 2 === 0) {
-          updateTimer(timer.id, newTime);
-        }
+        // Update database every second for real-time sync
+        updateTimer(timer.id, newTime);
       }, 1000);
 
       return () => clearInterval(interval);

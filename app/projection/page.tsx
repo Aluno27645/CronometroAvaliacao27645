@@ -17,9 +17,7 @@ export default function ProjectionPage() {
 
   // Update running timers every second
   useEffect(() => {
-    let tickCount = 0;
     const interval = setInterval(() => {
-      tickCount++;
       const updates: {[key: string]: number} = {};
       
       timers.forEach((timer) => {
@@ -27,11 +25,8 @@ export default function ProjectionPage() {
           const currentLocal = localTimers[timer.id] ?? timer.remaining;
           const newTime = currentLocal - 1;
           updates[timer.id] = newTime;
-          
-          // Update database every 2 seconds for better sync
-          if (tickCount % 2 === 0) {
-            updateTimer(timer.id, newTime);
-          }
+          // Update database every second for real-time sync
+          updateTimer(timer.id, newTime);
         }
       });
       
