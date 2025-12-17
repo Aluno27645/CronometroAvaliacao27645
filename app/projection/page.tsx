@@ -101,7 +101,7 @@ export default function ProjectionPage() {
               key={timer.id}
               className={`rounded-3xl p-4 sm:p-6 md:p-8 lg:p-10 transition-all backdrop-blur-sm border-2 overflow-hidden flex flex-col ${
                 timer.status === 'running'
-                  ? 'bg-gradient-to-br from-[#cba6f7]/90 to-[#b4befe]/85 border-[#cba6f7]/95 shadow-xl shadow-[#cba6f7]/50'
+                  ? 'bg-gradient-to-br from-[#cba6f7]/95 to-[#b4befe]/95 border-[#cba6f7] shadow-xl shadow-[#cba6f7]/60'
                   : isFinished
                   ? 'bg-gradient-to-br from-[#313244] to-[#181825] border-[#f38ba8]/50'
                   : 'bg-gradient-to-br from-[#313244] to-[#181825] border-[#45475a]'
