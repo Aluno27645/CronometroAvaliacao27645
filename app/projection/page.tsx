@@ -124,7 +124,7 @@ export default function ProjectionPage() {
                   timer.status === 'running' ? 'bg-[#11111b]/10' : 'bg-[#181825]'
                 }`}>
                   <div className={`font-bold w-full overflow-hidden flex items-center justify-center ${
-                    isOvertime ? 'text-[#f38ba8]' : timer.status === 'running' ? 'text-[#11111b]' : 'text-[#cdd6f4]'
+                    isOvertime ? 'text-[#ff5555]' : timer.status === 'running' ? 'text-[#11111b]' : 'text-[#cdd6f4]'
                   }`}
                   style={{fontSize: 'clamp(1rem, 5vw, 5rem)', lineHeight: '1'}}
                   >
@@ -138,7 +138,7 @@ export default function ProjectionPage() {
                   timer.status === 'running' ? 'bg-[#11111b]/10' : 'bg-[#181825]'
                 }`}>
                   <div className={`font-bold w-full overflow-hidden flex items-center justify-center ${
-                    isOvertime ? 'text-[#f38ba8]' : timer.status === 'running' ? 'text-[#11111b]' : 'text-[#cdd6f4]'
+                    isOvertime ? 'text-[#ff5555]' : timer.status === 'running' ? 'text-[#11111b]' : 'text-[#cdd6f4]'
                   }`}
                   style={{fontSize: 'clamp(1rem, 5vw, 5rem)', lineHeight: '1'}}
                   >
