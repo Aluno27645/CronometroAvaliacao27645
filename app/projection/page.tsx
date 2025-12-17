@@ -28,8 +28,8 @@ export default function ProjectionPage() {
           const newTime = currentLocal - 1;
           updates[timer.id] = newTime;
           
-          // Only update database every 5 seconds to reduce lag
-          if (tickCount % 5 === 0) {
+          // Update database every 2 seconds for better sync
+          if (tickCount % 2 === 0) {
             updateTimer(timer.id, newTime);
           }
         }
@@ -39,7 +39,7 @@ export default function ProjectionPage() {
     }, 1000);
 
     return () => clearInterval(interval);
-  }, [timers, updateTimer, localTimers]);
+  }, [timers, localTimers, updateTimer]);
 
   // Sync local timers with store timers when they change from external source
   useEffect(() => {

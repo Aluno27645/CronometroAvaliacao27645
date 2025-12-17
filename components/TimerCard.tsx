@@ -22,18 +22,18 @@ export default function TimerCard({ timer }: TimerCardProps) {
       let tickCount = 0;
       const interval = setInterval(() => {
         tickCount++;
-        const newTime = timer.remaining - 1;
+        const newTime = localTime - 1;
         setLocalTime(newTime);
         
-        // Only update database every 5 seconds to reduce lag
-        if (tickCount % 5 === 0) {
+        // Update database every 2 seconds for better sync
+        if (tickCount % 2 === 0) {
           updateTimer(timer.id, newTime);
         }
       }, 1000);
 
       return () => clearInterval(interval);
     }
-  }, [timer.status, timer.remaining, timer.id, updateTimer]);
+  }, [timer.status, timer.id, localTime, updateTimer]);
 
   const handleStartPause = async () => {
     if (timer.status === 'running') {
