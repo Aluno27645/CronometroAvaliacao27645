@@ -75,11 +75,10 @@ export default function ProjectionPage() {
       </Link>
 
       {/* Header */}
-      <div className="flex items-center justify-end mb-12 pt-4">
-        <div className="flex items-center gap-4 text-right">
+      <div className="flex items-center justify-center mb-12 pt-4">
+        <div className="flex items-center gap-4">
           <div>
             <h1 className="text-3xl font-bold uppercase tracking-wider text-[#cdd6f4]">Modo de apresentação</h1>
-            <p className="text-xl text-[#bac2de]">Presentation mode</p>
           </div>
           <div className="w-16 h-16 bg-gradient-to-br from-[#cba6f7] to-[#b4befe] rounded-full flex items-center justify-center shadow-lg shadow-[#cba6f7]/50">
             <FontAwesomeIcon icon={faHourglass} className="text-3xl text-[#11111b]" />
